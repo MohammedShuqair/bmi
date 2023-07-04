@@ -1,4 +1,4 @@
-import 'package:bmi_tt9/constans.dart';
+import 'package:bmi_tt9/constants.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(BMICalculator());
@@ -8,22 +8,13 @@ class BMICalculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-          scaffoldBackgroundColor: background,
-          appBarTheme: AppBarTheme(
-              color: Colors.transparent, elevation: 0, centerTitle: true),
-          colorScheme: Theme.of(context)
-              .colorScheme
-              .copyWith(primary: Colors.red, secondary: Colors.yellowAccent)),
-      // theme: ThemeData.dark().copyWith(
-      //   colorScheme: Theme.of(context)
-      //       .colorScheme
-      //       .copyWith(secondary: Colors.lightGreen),
-      //   appBarTheme: AppBarTheme(
-      //     elevation: 0,
-      //     backgroundColor: Colors.grey[900],
-      //   ),
-      //   scaffoldBackgroundColor: Colors.grey[900],
-      // ),
+        scaffoldBackgroundColor: backgroundColor,
+        appBarTheme:
+            AppBarTheme(backgroundColor: backgroundColor, elevation: 0),
+        colorScheme: Theme.of(context)
+            .colorScheme
+            .copyWith(primary: Colors.red, secondary: Colors.yellow),
+      ),
       home: InputPage(),
     );
   }
@@ -38,22 +29,11 @@ class _InputPageState extends State<InputPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
-      ),
-      body: Center(
-        child: Text('hello'),
-      ),
-      // floatingActionButton: Theme(
-      //   data: ThemeData().copyWith(
-      //       colorScheme: Theme.of(context)
-      //           .colorScheme
-      //           .copyWith(secondary: Colors.pinkAccent)),
-      //   child: FloatingActionButton(
-      //     onPressed: () {},
-      //     child: Icon(Icons.add),
-      //   ),
-      // ),
-    );
+        appBar: AppBar(
+          title: Text('BMI CALCULATOR'),
+        ),
+        body: Column(
+          children: [],
+        ));
   }
 }
