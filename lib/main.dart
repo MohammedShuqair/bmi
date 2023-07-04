@@ -1,3 +1,4 @@
+import 'package:bmi_tt9/constans.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(BMICalculator());
@@ -7,15 +8,22 @@ class BMICalculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-        colorScheme: Theme.of(context)
-            .colorScheme
-            .copyWith(secondary: Colors.lightGreen),
-        appBarTheme: AppBarTheme(
-          elevation: 0,
-          backgroundColor: Colors.grey[900],
-        ),
-        scaffoldBackgroundColor: Colors.grey[900],
-      ),
+          scaffoldBackgroundColor: background,
+          appBarTheme: AppBarTheme(
+              color: Colors.transparent, elevation: 0, centerTitle: true),
+          colorScheme: Theme.of(context)
+              .colorScheme
+              .copyWith(primary: Colors.red, secondary: Colors.yellowAccent)),
+      // theme: ThemeData.dark().copyWith(
+      //   colorScheme: Theme.of(context)
+      //       .colorScheme
+      //       .copyWith(secondary: Colors.lightGreen),
+      //   appBarTheme: AppBarTheme(
+      //     elevation: 0,
+      //     backgroundColor: Colors.grey[900],
+      //   ),
+      //   scaffoldBackgroundColor: Colors.grey[900],
+      // ),
       home: InputPage(),
     );
   }
@@ -36,10 +44,16 @@ class _InputPageState extends State<InputPage> {
       body: Center(
         child: Text('hello'),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-      ),
+      // floatingActionButton: Theme(
+      //   data: ThemeData().copyWith(
+      //       colorScheme: Theme.of(context)
+      //           .colorScheme
+      //           .copyWith(secondary: Colors.pinkAccent)),
+      //   child: FloatingActionButton(
+      //     onPressed: () {},
+      //     child: Icon(Icons.add),
+      //   ),
+      // ),
     );
   }
 }
