@@ -1,8 +1,8 @@
-import 'package:bmi_tt9/widgets.dart';
 import 'package:flutter/material.dart';
-
-import '../constants.dart';
+import '../shared/constants.dart';
 import '../models/result.dart';
+import '../shared/text_style.dart';
+import '../widgets/calculate_button.dart';
 
 class BMIResult extends StatelessWidget {
   final Result result;
@@ -38,23 +38,16 @@ class BMIResult extends StatelessWidget {
           children: [
             Text(
               result.category,
-              style: const TextStyle(
-                  color: resultCaption,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18),
+              style: categoryTextStyle,
             ),
             Text(
               result.bmiNum.toStringAsFixed(1),
-              style: const TextStyle(
-                fontSize: 60.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
+              style: numberTextStyle,
             ),
             Text(
               result.caption,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 18),
+              style: captionTextStyle,
             ),
           ],
         ),

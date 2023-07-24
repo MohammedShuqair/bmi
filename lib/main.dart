@@ -1,5 +1,5 @@
-import 'package:bmi_tt9/constants.dart';
-import 'package:bmi_tt9/screens/bmi.dart';
+import 'package:bmi_tt9/shared/constants.dart';
+import 'package:bmi_tt9/screens/bmi/bmi.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(BMICalculator());
